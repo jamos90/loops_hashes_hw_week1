@@ -48,6 +48,9 @@ for stations in stops
     p stations
   end
 end
+p stops.select {|n| n=="Falkirk High" }
+p stops.fetch(2)
+p stops.fetch(-4)
 
 #9. Reverse the positions of the stops in the array
 
