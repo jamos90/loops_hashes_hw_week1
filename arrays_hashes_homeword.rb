@@ -8,59 +8,59 @@
 #
 # #1. Add `"Edinburgh Waverley"` to the end of the array
 #
-# stops.push("Edinbrugh")
-# p stops
+stops.push("Edinbrugh")
+p stops
 #
 # #2. Add `"Glasgow Queen St"` to the start of the array
 #
-# stops.insert(0, "Glasgow")
-# p stops
+stops.insert(0, "Glasgow")
+p stops
 #
 # #3. Add `"Polmont"` at the appropriate point (between `"Falkirk High"` and `"Linlithgow"`)
 #
-# stops.insert(4, "Polmont")
-# p stops
+stops.insert(4, "Polmont")
+p stops
 #
 # #4. Work out the index position of `"Linlithgow"
 #
-# p stops.index("Linlithgow")
+p stops.index("Linlithgow")
 #
 # #5. Remove `"Livingston"` from the array using its name
 #
-# stops.delete("Livingston")
-# p stops
+stops.delete("Livingston")
+p stops
 #
 # #6. Delete `"Cumbernauld"` from the array by index
 #
-# stops.delete_at(1)
-# p stops
-#
+stops.delete_at(1)
+p stops
+
 # #7. How many stops there are in the array?
 #
-# p stops.length
+p stops.length
 #
 # #8. How many ways can we return `"Falkirk High"` from the array?
 #
-# p stops[2]
-# p stops[-5]
-# for stations in stops
-#   if stations == "Falkirk High"
-#     p stations
-#   end
-# end
-# p stops.select {|n| n=="Falkirk High" }
-# p stops.fetch(2)
-# p stops.fetch(-5)
+p stops[2]
+p stops[-5]
+for stations in stops
+  if stations == "Falkirk High"
+    p stations
+  end
+end
+p stops.select {|n| n=="Falkirk High" }
+p stops.fetch(2)
+p stops.fetch(-5)
 #
 # #9. Reverse the positions of the stops in the array
 #
-# p stops.reverse()
+p stops.reverse()
 #
 # #10. Print out all the stops using a for loop
 #
-# for stations in stops
-#  p stations
-# end
+for stations in stops
+ p stations
+end
 
 # Exercise B
 
@@ -126,43 +126,57 @@ users = {
 
 #1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
 
-#  p users["Erik"][:twitter]
+ p users["Erik"][:twitter]
 #
 # #2. Get Erik's hometown
 #
-# p users["Erik"][:home_town]
+p users["Erik"][:home_town]
 #
 # #3. Get the array of Erik's lottery numbers
-# p users["Erik"][:lottery_numbers]
+
+p users["Erik"][:lottery_numbers]
 #
 # #4. Get the type of Avril's pet Monty
 #
-# p users["Avril"][:pets][0][:species]
+p users["Avril"][:pets][0][:species]
 #
 # #5. Get the smallest of Erik's lottery numbers
 #
-# p users["Erik"][:lottery_numbers[2]]
+p users["Erik"][:lottery_numbers[2]]
 #
 # #6. Return an array of Avril's lottery numbers that are even
 #
-# p users["Avril"][:lottery_numbers].select{|num| num.even?}
+p users["Avril"][:lottery_numbers].select{|num| num.even?}
 #
 # #7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 #
-# p users["Erik"][:lottery_numbers].push(7)
+p users["Erik"][:lottery_numbers].push(7)
 #
 # #8. Change Erik's hometown to Edinburgh
 #
-# users["Erik"][:home_town] = "Edinburgh"
-# p users["Erik"][:home_town]
+users["Erik"][:home_town] = "Edinburgh"
+p users["Erik"][:home_town]
 #
 # #9. Add a pet dog to Erik called "Fluffy"
 #
-# p users["Erik"][:pets] => {name: "fluffy", species:"dog"}
+p users["Erik"][:pets] => {name: "fluffy", species:"dog"}
 #
 # #10. Add another person to the users hash
 
+users ["James"] = {
+  :twitter => "jamos",
+  :lottery_numbers => [1,3,4,53,54],
+  :home_town => "Edinburgh",
+  :pets => [
+    {
+    :name => "Tabby",
+    :species => "Cat"
+    }
+  ]
+}
 
+
+p users
 
 # Exercise C
 
